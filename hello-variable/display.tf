@@ -21,6 +21,23 @@ output "custom_hello"{
 
 # made changes to variable to adjsut age variable with default value and pasing multiple perams via command line
 # PS C:\Users\Sreyas Tendulkar\Desktop\myrepos\hello-variable> terraform plan -var "username=tejas" -var "age=22"
-
 # Changes to Outputs:
 #   + custom_hello = "hello, tejas, your age is 22"
+
+
+
+# added datattype to variable and error msg thrown for wrong input
+# PS C:\Users\Sreyas Tendulkar\Desktop\myrepos\hello-variable> terraform plan -var "username=tejas" -var "age=u"
+# Planning failed. Terraform encountered an error while generating this plan.
+# ╷
+# │ Error: Invalid value for input variable
+# │
+# │   on variable.tf line 6:
+# │    6: variable age{
+# │
+# │ Unsuitable value for var.age set using -var="age=...": a number is required.
+# ╵
+# PS C:\Users\Sreyas Tendulkar\Desktop\myrepos\hello-variable> terraform plan -var "username=tejas" -var "age=20"
+
+# Changes to Outputs:
+#   + custom_hello = "hello, tejas, your age is 20"
