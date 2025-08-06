@@ -1,0 +1,8 @@
+{
+    "output":{
+        "hello1":{
+            "value":"hello world sreyas here"
+        }
+    }
+}
+#this uses a tf.json file for similar config but this is more computer friendly
