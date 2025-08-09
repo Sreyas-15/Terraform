@@ -23,3 +23,7 @@ override.tf.json
 # CLI config files
 .terraformrc
 terraform.rc
+
+# private and public keys which are genrated in working copy
+*.pub
+id_*
