@@ -10,11 +10,15 @@ resource "github_repository" "myfirst-repo" {
   auto_init=true
 }
 
-resource "github_repository" "mysecond-repo" {
-  name        = "second-repo"
-  description = "creating this second repo from terraform"
-
-  visibility = "public"
-  auto_init=true
+output "terraform-first-repo-url"{
+  value=github_repository.myfirst-repo.html_url
 }
+
+# resource "github_repository" "mysecond-repo" {
+#   name        = "second-repo"
+#   description = "creating this second repo from terraform"
+
+#   visibility = "public"
+#   auto_init=true
+# }
 
